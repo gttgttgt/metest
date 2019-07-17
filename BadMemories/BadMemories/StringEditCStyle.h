@@ -1,3 +1,6 @@
 #pragma once
 
-void HelloWorldToHelloJapan(char* ioString);
+char* HelloWorldToHelloJapan(char ioString[]);
+
+void Replace(char srcChar[], char desChar[], int startIndex, int endindex);
+

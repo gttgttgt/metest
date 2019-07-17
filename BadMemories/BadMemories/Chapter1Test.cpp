@@ -1,6 +1,7 @@
 #include "pch.h"
 
 #include "StringEditCStyle.h"
+using namespace std;
 
 
 
@@ -15,12 +16,22 @@
 TEST(Chapter1, _1_EditStringC) {
 	char* helloworld = nullptr;
 	{//ここから変更可
-		HelloWorldToHelloJapan(helloworld);
+		char inStr[] = "HelloWorld!";//配列の先頭ポインタを渡すと、例外は発生しない
+		//char inStr = "HelloWorld!";//ポインタだとアクセス違反が発生する 
+		helloworld = HelloWorldToHelloJapan(inStr);
+
 	}//ここまで変更可
 
-	EXPECT_EQ(helloworld, "HelloJapan?");
+	EXPECT_STREQ(helloworld, "HelloJapan?");
 	const char* temp = "HelloWorld!";
 	EXPECT_EQ(temp[5], 'W');
+
+	/*
+	[メモ１]
+	EXPECT_EQはポインタの比較。「アドレス」と「型」
+
+
+	*/
 }
 
 
