@@ -18,7 +18,7 @@ TEST(Chapter1, _1_EditStringC) {
 		HelloWorldToHelloJapan(helloworld);
 	}//Ç±Ç±Ç‹Ç≈ïœçXâ¬
 
-	EXPECT_EQ(helloworld, "HelloJapan?");
+	EXPECT_STREQ(helloworld, "HelloJapan?");
 	const char* temp = "HelloWorld!";
 	EXPECT_EQ(temp[5], 'W');
 }
@@ -38,7 +38,7 @@ TEST(Chapter1, _2_EditStringC) {
 		HelloWorldToHelloJapan(helloworld);
 	}//Ç±Ç±Ç‹Ç≈ïœçXâ¬
 
-	EXPECT_EQ(helloworld, "ByeWorld!");
+	EXPECT_STREQ(helloworld, "ByeWorld!");
 	const char* temp = "HelloWorld!";
 	EXPECT_EQ(temp[5], 'W');
 }
@@ -57,7 +57,7 @@ TEST(Chapter1, _3_EditStringC) {
 		HelloWorldToHelloJapan(helloworld);
 	}//Ç±Ç±Ç‹Ç≈ïœçXâ¬
 
-	EXPECT_EQ(helloworld, "Hello!World!");
+	EXPECT_STREQ(helloworld, "Hello!World!");
 	const char* temp = "HelloWorld!";
 	EXPECT_EQ(temp[5], 'W');
 }
